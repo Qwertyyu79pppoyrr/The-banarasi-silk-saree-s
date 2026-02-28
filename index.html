@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Banarasi Premium Silk Sarees | Luxury Ethnic Wear</title>
+    
+    <!-- Fonts: Playfair Display (Serif) & Lato (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Configuration for Brand Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            maroon: '#800020',
+                            gold: '#D4AF37',
+                            ivory: '#FFFFF0',
+                            emerald: '#50C878',
+                            dark: '#1a1a1a',
+                            light: '#f9f9f9'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Luxury Styles */
+        body {
+            background-color: #FFFFF0; /* Ivory */
+            color: #1a1a1a;
+        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Lato', sans-serif; }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Gold Gradient Text */
+        .text-gold-gradient {
+            background: linear-gradient(45deg, #D4AF37, #F2D06B, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Button Hover Effects */
+        .btn-gold {
+            background-color: #D4AF37;
+            color: #800020;
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            background-color: #b5952f;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-maroon {
+            background-color: #800020;
+            color: #FFFFF0;
+            transition: all 0.3s ease;
+        }
+        .btn-maroon:hover {
+            background-color: #5a0016;
+            transform: translateY(-2px);
+        }
+
+        /* Image Zoom Overlay */
+        .zoom-container:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Hide Scrollbar for clean UI */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-brand-maroon text-brand-ivory text-xs py-2 text-center tracking-widest">
+        <p><i class="fa-solid fa-phone mr-2"></i> +91 98765 43210 | FREE SHIPPING ON PREPAID ORDERS OVER ₹5000</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-brand-ivory/95 backdrop-blur-md shadow-sm border-b border-brand-gold/20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl md:text-3xl font-serif font-bold text-brand-maroon">
+                The Banarasi <span class="text-brand-gold">Premium</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-brand-dark font-semibold">
+                <a href="#home" class="hover:text-brand-maroon transition">Home</a>
+                <a href="#collections" class="hover:text-brand-maroon transition">Collections</a>
+                <a href="#bridal" class="hover:text-brand-maroon transition">Bridal</a>
+                <a href="#shop" class="hover:text-brand-maroon transition">Shop</a>
+                <a href="#about" class="hover:text-brand-maroon transition">Heritage</a>
+            </div>
+
+            <!-- Icons -->
+            <div class="flex items-center space-x-6">
+                <button class="hover:text-brand-maroon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hover:text-brand-maroon relative" onclick="toggleCart()">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-brand-maroon text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                </button>
+                <button class="hover:text-brand-maroon"><i class="fa-regular fa-heart"></i></button>
+                <button class="md:hidden text-brand-maroon"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-[80vh] flex items-center justify-center overflow-hidden">
+        <!-- Background Image (Placeholder for High Res) -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=2500&auto=format&fit=crop" alt="Banarasi Silk Bride" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-maroon/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-white md:pr-12">
+                <span class="text-brand-gold uppercase tracking-[0.2em] text-sm font-bold mb-2 block">Authentic Handloom</span>
+                <h1 class="text-5xl md:text-7xl font-serif font-bold leading-tight mb-6">Weaving Royalty <br>Into Every <span class="text-gold-gradient">Thread</span></h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 font-light">Discover the finest Banarasi Silk, Katan, and Organza sarees crafted for the modern royal.</p>
+                <div class="flex flex-col md:flex-row gap-4">
+                    <a href="#shop" class="btn-gold px-8 py-4 text-center font-bold uppercase tracking-wider text-sm">Shop Collection</a>
+                    <a href="#bridal" class="border-2 border-brand-gold text-brand-gold px-8 py-4 text-center font-bold uppercase tracking-wider text-sm hover:bg-brand-gold hover:text-brand-maroon transition">Bridal Edit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Strip -->
+    <section class="bg-brand-maroon text-brand-ivory py-8 border-b-4 border-brand-gold">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+            <div><i class="fa-solid fa-hand-holding-heart text-brand-gold text-2xl mb-2"></i><h4 class="font-serif">Handwoven</h4></div>
+            <div><i class="fa-solid fa-gem text-brand-gold text-2xl mb-2"></i><h4 class="font-serif">Pure Zari</h4></div>
+            <div><i class="fa-solid fa-truck-fast text-brand-gold text-2xl mb-2"></i><h4 class="font-serif">Express Shipping</h4></div>
+            <div><i class="fa-solid fa-award text-brand-gold text-2xl mb-2"></i><h4 class="font-serif">Certified Authenticity</h4></div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-20 container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold text-brand-maroon mb-4">Curated Collections</h2>
+            <div class="w-24 h-1 bg-brand-gold mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Category 1 -->
+            <div class="group relative overflow-hidden h-96 cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1610091096330-9b1a1fde6a7b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition"></div>
+                <div class="absolute bottom-8 left-8 text-white">
+                    <h3 class="text-3xl font-serif">Bridal</h3>
+                    <p class="text-brand-gold mt-2 uppercase tracking-widest text-sm">Shop Now</p>
+                </div>
+            </div>
+            <!-- Category 2 -->
+            <div class="group relative overflow-hidden h-96 cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1583391728516-7cfd750335e3?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition"></div>
+                <div class="absolute bottom-8 left-8 text-white">
+                    <h3 class="text-3xl font-serif">Festive</h3>
+                    <p class="text-brand-gold mt-2 uppercase tracking-widest text-sm">Shop Now</p>
+                </div>
+            </div>
+            <!-- Category 3 -->
+            <div class="group relative overflow-hidden h-96 cursor-pointer">
+                <img src="https://images.unsplash.com/photo-161
